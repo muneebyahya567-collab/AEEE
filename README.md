@@ -1,23 +1,23 @@
-# AEEE ExCom Elections website
+# AEEE ExCom Call — custom logo edition
 
-A responsive GitHub Pages website inspired by the clean, student-association style of the reference site, adapted for AEEE ExCom elections.
+This is a distinct, editorial-style website for the AEEE ExCom call, using the supplied association logo. It has a dark graphite hero, acid-green accents, dotted texture, a compact call-to-action, and one application form section.
 
 ## Files
-- `index.html` — page sections and application form
-- `style.css` — responsive styling
-- `script.js` — mobile navigation and form submission
-- `.nojekyll` — static Pages marker
+- `index.html`
+- `style.css`
+- `script.js`
+- `aeee-logo.jpeg` — supplied logo image
+- `.nojekyll`
 
-## Before publishing
-- Confirm the official AEEE name/branding, roles, eligibility, dates, and election process. Sample roles and dates in this starter must be replaced.
-- GitHub Pages does not store form submissions. Create a form at https://formspree.io/, copy the endpoint (for example `https://formspree.io/f/abcdefgh`) and replace `https://formspree.io/f/YOUR_FORMSPREE_ID` in `script.js`.
-- Verify the form and test a submission before collecting real student data. Add a privacy contact/policy and limit access to authorized election organizers.
+## Deploy to the existing GitHub repository
+1. Download and extract this ZIP.
+2. Open the existing GitHub repository.
+3. Upload/replace all five website files in the repository root. Ensure `aeee-logo.jpeg` is uploaded too.
+4. Commit the changes. GitHub Pages will redeploy automatically.
+5. Hard-refresh the live site with Ctrl+F5.
 
-## Publish to GitHub Pages
-1. Create a repository named `aeee-excom-election` at https://github.com/new.
-2. Upload all files to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/(root)`, then Save.
-5. After deployment, visit `https://YOUR-USERNAME.github.io/aeee-excom-election/`.
+## Form setup
+GitHub Pages cannot store application responses by itself. Create a form at https://formspree.io/ and replace `https://formspree.io/f/YOUR_FORMSPREE_ID` in `script.js` with the actual endpoint. Verify and test the form before sharing it publicly. Preserve any existing working endpoint if you already configured one.
 
-The website is static and does not require a build step.
+## Before launch
+Confirm the official organisation name, election year, eligibility, and application deadline. Limit access to student information to the authorised election team.
