@@ -13,3 +13,6 @@ A responsive AEEE ExCom recruitment website with a warm off-white header/footer,
 Upload/replace `index.html`, `style.css`, `script.js`, and `aeee-logo.png` in the root of the `eeegecw.github.io` repository. Commit changes and wait for Pages deployment.
 
 The form endpoint is configured as `https://formspree.io/f/myekapvb`. Test a submission after publishing. Do not claim success unless Formspree confirms receipt.
+
+
+The large centered hero emblem uses `aeee-logo-white.png` for contrast on the dark background. The small header and footer logos remain dark.
