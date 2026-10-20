@@ -18,45 +18,89 @@
 @media(prefers-reduced-motion:reduce){.js-motion [data-reveal],.hero h1 span,.logo-frame,.visual-sticker{opacity:1!important;transform:none!important;animation:none!important;transition:none!important;will-change:auto}}
 
 
-/* Professional refinement: calmer spacing, stronger hierarchy, polished controls. */
-:root{--black:#11130f;--paper:#f7f7f2;--white:#fff;--green:#c8f169;--muted:#73776d;--line:#e2e4db;--darkline:#30342b}
-body{background:var(--paper);letter-spacing:-.008em}
-.header{padding-inline:clamp(20px,6vw,88px);backdrop-filter:blur(14px);background:rgba(247,247,242,.94);border-bottom-color:#e4e6dd}
-.brand-logo{border-radius:10px}
-.header-link{border-radius:2px;transition:background .2s,color .2s,border-color .2s}
-.header-link:hover{background:var(--black);color:var(--paper);border-color:var(--black)}
-.hero{padding-inline:clamp(22px,7vw,104px);background:radial-gradient(ellipse at 72% 44%,#24281d 0%,#151712 38%,#10110f 78%)}
-.grid-texture{opacity:.12;background-size:27px 27px}
-.hero-layout{max-width:1260px;grid-template-columns:minmax(0,1.04fr) minmax(320px,.96fr);gap:clamp(30px,5vw,80px);min-height:590px}
-.hero h1{font-size:clamp(64px,8.3vw,112px);line-height:.88;letter-spacing:-.09em}
-.eyebrow,.hero-topline,.hero-bottomline,.location,.header-link,.scroll-link,.button,.section-index,.form-kicker,.form-required,.application-form label,.footer-bottom{letter-spacing:.11em}
-.hero-description{font-size:15px;line-height:1.85;max-width:390px}
-.button{min-height:48px;border-radius:2px;padding:16px 19px}
-.button-green{box-shadow:0 5px 0 rgba(200,241,105,.1)}
-.button-green:hover{box-shadow:0 8px 22px #c8f16922}
-.hero-visual{min-height:450px}
-.logo-frame{width:min(355px,78%);box-shadow:16px 16px 0 var(--green);transform:rotate(0deg);border:1px solid #41443a}
-.logo-frame img{filter:none;object-fit:cover}
-.orbit-label{font-size:8px}
-.visual-sticker{box-shadow:0 12px 28px #0003}
-.call-section{padding:clamp(72px,8vw,118px) clamp(22px,8vw,120px);gap:clamp(35px,7vw,100px);max-width:1600px;margin:0 auto}
-.form-intro h2{font-size:clamp(50px,5.4vw,72px);line-height:.98;letter-spacing:-.08em}
-.intro-text{font-size:14px;line-height:1.9}
-.application-form{border:1px solid #e2e4db;box-shadow:0 18px 55px #20251a0b;padding:clamp(24px,3vw,42px);border-radius:4px}
-.form-header{margin-bottom:30px}
-.form-header h3{font-size:clamp(24px,2.2vw,31px);letter-spacing:-.055em}
-.application-form input:not([type=checkbox]),.application-form select,.application-form textarea{border-radius:3px;background:#fbfbf8;padding:15px 14px;min-height:48px;border-color:#dfe1d8;font-size:13px}
-.application-form input:focus,.application-form select:focus,.application-form textarea:focus{border-color:#91b345;box-shadow:0 0 0 3px #c8f16944}
-.application-form textarea{min-height:125px}
-.consent{font-size:11px!important;line-height:1.7!important;letter-spacing:0!important}
-.submit-button{min-height:54px;border-radius:3px}
-.form-status{line-height:1.6;font-size:13px}
-.privacy-note{font-size:10px;line-height:1.75;color:#777b71}
-.footer{padding:36px clamp(22px,7vw,104px) 20px;gap:24px}
-.footer-brand img{border-radius:9px}
-.footer-message{letter-spacing:.16em}
-.back-top{padding:10px 0}
-:focus-visible{outline:3px solid #8da94a;outline-offset:3px}
-@media(min-width:1100px){.hero-copy{padding-block:55px}.hero-footnote{margin-top:42px}.hero-visual{height:500px}}
-@media(max-width:850px){.hero-layout{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);gap:25px}.hero h1{font-size:clamp(58px,8.2vw,86px)}.call-section{gap:35px}}
-@media(max-width:620px){.hero{background:radial-gradient(ellipse at 75% 62%,#25291e 0%,#151712 42%,#10110f 82%)}.hero-layout{display:flex}.hero-copy{padding-top:54px}.hero h1{font-size:clamp(58px,16.5vw,82px)}.hero-visual{height:310px;min-height:310px}.logo-frame{width:225px;box-shadow:10px 10px 0 var(--green)}.application-form{padding:24px 17px;box-shadow:0 12px 32px #20251a0b}.call-section{padding-top:66px;padding-bottom:72px}.footer{gap:18px}}
+/* Professional refinement layer — retains the existing layout, scroll reveals, and form. */
+:root {
+  --black: #11130f;
+  --paper: #f7f7f2;
+  --white: #ffffff;
+  --green: #c9ef78;
+  --muted: #777c70;
+  --line: #e1e3d9;
+  --darkline: #2d3128;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { background: var(--paper); color: #171914; }
+.header {
+  height: 78px; padding: 0 clamp(22px, 6vw, 92px);
+  background: rgba(247,247,242,.96); backdrop-filter: blur(14px);
+  border-bottom: 1px solid #e4e5dc;
+}
+.brand { gap: 12px; }
+.brand-logo { border-radius: 50%; border: 1px solid #d7d9ce; }
+.brand-name { letter-spacing: .06em; }
+.location, .header-link { font-size: 10px; letter-spacing: .08em; }
+.header-link { border: 1px solid #c6cabc; padding: 13px 17px; transition: background .2s, border-color .2s; }
+.header-link:hover { background: var(--green); border-color: var(--green); }
+.hero { padding: 26px clamp(22px, 7vw, 105px) 0; min-height: 700px; }
+.grid-texture { opacity: .12; background-size: 28px 28px; }
+.hero-topline, .hero-bottomline { letter-spacing: .1em; }
+.hero-layout { max-width: 1240px; grid-template-columns: 1.05fr .95fr; gap: 7%; min-height: 585px; }
+.hero-copy { padding: 52px 0 42px; }
+.eyebrow { letter-spacing: .1em; font-size: 10px; }
+.hero h1 { font-size: clamp(64px, 8.2vw, 112px); line-height: .88; letter-spacing: -.075em; margin: 30px 0 26px; }
+.hero-description { max-width: 430px; font-size: 15px; line-height: 1.8; color: #c3c6bc; }
+.hero-actions { gap: 28px; margin-top: 32px; }
+.button { font-size: 10px; letter-spacing: .075em; padding: 17px 20px; }
+.button-green { border-radius: 2px; }
+.button-green:hover { background: #d9fb9a; box-shadow: 0 7px 24px #c8f16922; }
+.scroll-link { font-size: 10px; }
+.hero-footnote { margin-top: 54px; font-size: 9px; }
+.hero-visual { height: 470px; }
+.logo-frame { width: min(350px, 82%); box-shadow: 14px 14px 0 var(--green); border: 1px solid #41443b; }
+.logo-frame img { filter: grayscale(1) contrast(1.04); }
+.visual-index, .orbit-label { font-size: 9px; }
+.visual-sticker { width: 88px; height: 88px; box-shadow: 0 8px 24px #0003; }
+.hero-bottomline { padding: 20px 0 22px; }
+.call-section { padding: clamp(72px, 8vw, 116px) clamp(22px, 8vw, 120px); grid-template-columns: .78fr 1.22fr; gap: clamp(36px, 8vw, 118px); }
+.form-intro { top: 112px; }
+.section-index, .form-kicker { font-size: 10px; letter-spacing: .11em; }
+.form-intro h2 { font-size: clamp(50px, 5vw, 72px); letter-spacing: -.065em; }
+.intro-text { font-size: 14px; line-height: 1.85; color: #666b60; }
+.form-side-note { font-size: 9px; }
+.application-form { padding: clamp(25px, 3.2vw, 42px); border: 1px solid #e2e4da; box-shadow: 9px 9px 0 #e9eadf; }
+.form-header { margin-bottom: 30px; padding-bottom: 22px; }
+.form-header h3 { font-size: clamp(25px, 2.4vw, 31px); font-weight: 600; }
+.form-required { font-size: 9px; }
+.application-form label { font-size: 10px; letter-spacing: .06em; }
+.application-form input:not([type=checkbox]), .application-form select, .application-form textarea {
+  border-radius: 2px; background: #fdfdf9; border-color: #dfe1d7; padding: 15px 14px; font-size: 13px;
+}
+.application-form input:focus, .application-form select:focus, .application-form textarea:focus { border-color: #91b548; box-shadow: 0 0 0 3px #c8f16935; }
+.application-form textarea { min-height: 130px; }
+.consent { font-size: 11px !important; line-height: 1.65 !important; }
+.submit-button { margin-top: 3px; }
+.form-status { font-size: 13px; line-height: 1.6; }
+.privacy-note { font-size: 10px; color: #85897d; }
+.footer { padding: 32px clamp(22px, 7vw, 105px) 20px; }
+.footer-brand { letter-spacing: .07em; }
+.footer-bottom { font-size: 9px; }
+@media (max-width: 850px) {
+  .hero { padding-left: 5%; padding-right: 5%; }
+  .call-section { padding: 76px 5%; gap: 6%; }
+  .application-form { padding: 27px 24px; }
+}
+@media (max-width: 620px) {
+  .header { height: 66px; padding: 0 5%; }
+  .hero { padding: 22px 6% 0; }
+  .hero h1 { font-size: clamp(58px, 16.5vw, 88px); }
+  .hero-description { font-size: 14px; }
+  .hero-visual { height: 320px; }
+  .logo-frame { width: 225px; box-shadow: 10px 10px 0 var(--green); }
+  .call-section { padding: 64px 6%; }
+  .form-intro h2 { font-size: 54px; }
+  .application-form { padding: 25px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
