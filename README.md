@@ -1,10 +1,15 @@
-# AEEE Clean Reference-Style Website
+# AEEE ExCom Website — Graphite + Lime Theme
 
-A clean white, dotted-background AEEE ExCom landing page inspired by the supplied reference screenshots. Includes responsive layout, subtle scroll reveals, the AEEE logo converted to a transparent black mark for the white design, and background Formspree submission.
+A responsive AEEE ExCom recruitment website with a warm off-white header/footer, dark graphite hero and application area, electric-lime accents, subtle dotted background, scroll reveal animations, and Formspree submission.
 
-## Publish
-Upload/replace `index.html`, `style.css`, and `script.js` in the root of the `eeegecw.github.io` GitHub repository. Upload `aeee-logo.png` too. Keep the original `aeee-logo.jpeg` if desired; the site uses `aeee-logo.png`.
+## Files
+- `index.html` — homepage and application form
+- `style.css` — visual design and responsive styles
+- `script.js` — scroll animations and background Formspree submission
+- `aeee-logo.png` — AEEE logo
+- `aeee-logo-original.jpeg` — original uploaded logo copy
 
-Form endpoint configured: `https://formspree.io/f/myekapvb`
+## Publish on GitHub Pages
+Upload/replace `index.html`, `style.css`, `script.js`, and `aeee-logo.png` in the root of the `eeegecw.github.io` repository. Commit changes and wait for Pages deployment.
 
-After deployment, test one application and confirm it appears in Formspree Submissions. The form only displays success after a successful response from Formspree.
+The form endpoint is configured as `https://formspree.io/f/myekapvb`. Test a submission after publishing. Do not claim success unless Formspree confirms receipt.
