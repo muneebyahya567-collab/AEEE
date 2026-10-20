@@ -21,3 +21,7 @@ GitHub Pages cannot store application responses by itself. Create a form at http
 
 ## Before launch
 Confirm the official organisation name, election year, eligibility, and application deadline. Limit access to student information to the authorised election team.
+
+
+## Scroll animations
+The homepage now includes reveal-on-scroll animations and staggered form-field entrances. The animations respect the visitor's reduced-motion accessibility preference. The Formspree endpoint is configured and the semester list is restricted to S1, S3, S5, and S7.
