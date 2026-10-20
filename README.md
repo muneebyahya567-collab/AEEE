@@ -1,27 +1,10 @@
-# AEEE ExCom Call — custom logo edition
+# AEEE Clean Reference-Style Website
 
-This is a distinct, editorial-style website for the AEEE ExCom call, using the supplied association logo. It has a dark graphite hero, acid-green accents, dotted texture, a compact call-to-action, and one application form section.
+A clean white, dotted-background AEEE ExCom landing page inspired by the supplied reference screenshots. Includes responsive layout, subtle scroll reveals, the AEEE logo converted to a transparent black mark for the white design, and background Formspree submission.
 
-## Files
-- `index.html`
-- `style.css`
-- `script.js`
-- `aeee-logo.jpeg` — supplied logo image
-- `.nojekyll`
+## Publish
+Upload/replace `index.html`, `style.css`, and `script.js` in the root of the `eeegecw.github.io` GitHub repository. Upload `aeee-logo.png` too. Keep the original `aeee-logo.jpeg` if desired; the site uses `aeee-logo.png`.
 
-## Deploy to the existing GitHub repository
-1. Download and extract this ZIP.
-2. Open the existing GitHub repository.
-3. Upload/replace all five website files in the repository root. Ensure `aeee-logo.jpeg` is uploaded too.
-4. Commit the changes. GitHub Pages will redeploy automatically.
-5. Hard-refresh the live site with Ctrl+F5.
+Form endpoint configured: `https://formspree.io/f/myekapvb`
 
-## Form setup
-GitHub Pages cannot store application responses by itself. Create a form at https://formspree.io/ and replace `https://formspree.io/f/YOUR_FORMSPREE_ID` in `script.js` with the actual endpoint. Verify and test the form before sharing it publicly. Preserve any existing working endpoint if you already configured one.
-
-## Before launch
-Confirm the official organisation name, election year, eligibility, and application deadline. Limit access to student information to the authorised election team.
-
-
-## Scroll animations
-The homepage now includes reveal-on-scroll animations and staggered form-field entrances. The animations respect the visitor's reduced-motion accessibility preference. The Formspree endpoint is configured and the semester list is restricted to S1, S3, S5, and S7.
+After deployment, test one application and confirm it appears in Formspree Submissions. The form only displays success after a successful response from Formspree.
