@@ -1,11 +1,13 @@
-AEEE ExCom recruitment website — GitHub Pages ready
+# AEEE ExCom website — three-page version
 
-Files:
-- index.html: homepage
-- apply.html: application form
-- thank-you.html: standalone thank-you page after successful submission
-- style.css: site styling
-- script.js: scroll effects and Formspree submission handling
-- aeee-logo.png and aeee-logo-white.png: logo assets
+- `index.html`: homepage
+- `apply.html`: application form
+- `thankyou.html`: confirmation page shown after successful submission
+- `style.css`: shared responsive theme
+- `script.js`: scroll animations and Formspree submission handling
+- `aeee-logo.png`, `aeee-logo-white.png`: logo assets
 
-Deployment: upload ALL files in this folder to the ROOT of your GitHub Pages repository (not inside another folder). Keep the Formspree endpoint in script.js as https://formspree.io/f/myekapvb. The thank-you page opens only after Formspree confirms a successful submission.
+## Publish
+Upload all files to the root of your GitHub Pages repository, replacing existing matching files. Ensure `thankyou.html` is uploaded too. Commit changes and wait for GitHub Pages to deploy.
+
+The form submits to `https://formspree.io/f/myekapvb` using an AJAX request. The browser redirects to `thankyou.html` only if Formspree returns a successful response. Test after deployment.

@@ -50,8 +50,8 @@ if (form) {
       if (!response.ok || result.errors) {
         throw new Error((result.errors || []).map((e) => e.message).join(", ") || "Submission failed.");
       }
-      form.reset();
-      window.location.href = "thank-you.html";
+      // Only redirect after Formspree confirms that the application was received.
+      window.location.href = "thankyou.html";
     } catch (error) {
       console.error("AEEE application submission error:", error);
       if (status) {
